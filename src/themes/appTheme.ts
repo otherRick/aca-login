@@ -16,7 +16,16 @@ export const sizes = {
   xl: '50'
 };
 
+export const weights = {
+  bold: '900',
+  semiBold: '700',
+  medium: '600',
+  regular: '400',
+  light: '200'
+};
+
 export const appTheme: DefaultTheme = {
   colors,
-  sizes
+  sizes,
+  weights
 };
