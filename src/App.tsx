@@ -5,7 +5,9 @@ import { appTheme } from './themes/appTheme';
 export const App = () => {
   return (
     <ThemeProvider theme={appTheme}>
-      <Text>sad</Text>
+      <div style={{ height: '100vh', background: 'black' }}>
+        <Text $size='xl'>Login</Text>
+      </div>
     </ThemeProvider>
   );
 };

@@ -5,7 +5,7 @@ import { getElementBySize } from './helpers/getElementBySize';
 export const Text = ({
   $weight = 'regular',
   $size = 'm',
-  $color = 'navy000',
+  $color = 'navy900',
   children
 }: TextProps) => (
   <S.Text
