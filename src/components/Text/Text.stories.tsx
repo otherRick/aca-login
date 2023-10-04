@@ -28,6 +28,7 @@ export const SizeM = (args: TextProps) => (
     {args.children}
   </Text>
 );
+
 export const SizeS = (args: TextProps) => (
   <Text $size='s' {...args}>
     {args.children}

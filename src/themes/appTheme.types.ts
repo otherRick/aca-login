@@ -1,4 +1,4 @@
-import { colors, sizes } from '../themes/appTheme';
+import { colors, sizes } from './appTheme';
 
 export type ColorType = typeof colors;
 export type SizesType = typeof sizes;
