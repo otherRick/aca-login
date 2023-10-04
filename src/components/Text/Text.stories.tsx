@@ -1,38 +1,41 @@
-import { Meta } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { Text } from './Text';
 import { TextProps } from './Text.types';
 import { ThemeDecorator } from '../../storybook/decorators/ThemeDecorator';
+import { BackgroundLayout } from '../../storybook/decorators/BackgroundLayout';
 
 const meta: Meta<typeof Text> = {
   component: Text,
-  decorators: [ThemeDecorator],
+  decorators: [ThemeDecorator, BackgroundLayout],
   args: {
     children: 'This is a sample text from storybook'
   }
 };
 
-export const SizeXL = (args: TextProps) => (
-  <Text $size='xl' {...args}>
-    {args.children}
-  </Text>
-);
+const Template = (args: TextProps) => <Text {...args} />;
 
-export const SizeL = (args: TextProps) => (
-  <Text $size='l' {...args}>
-    {args.children}
-  </Text>
-);
+export const SizeXL: StoryFn<typeof Text> = Template.bind({});
+SizeXL.args = {
+  children: 'Text with Size XL',
+  $size: 'm'
+};
 
-export const SizeM = (args: TextProps) => (
-  <Text $size='m' {...args}>
-    {args.children}
-  </Text>
-);
+export const SizeL: StoryFn<typeof Text> = Template.bind({});
+SizeXL.args = {
+  children: 'Text with Size L',
+  $size: 'm'
+};
 
-export const SizeS = (args: TextProps) => (
-  <Text $size='s' {...args}>
-    {args.children}
-  </Text>
-);
+export const SizeM: StoryFn<typeof Text> = Template.bind({});
+SizeM.args = {
+  children: 'Text with Size M',
+  $size: 'm'
+};
+
+export const SizeS: StoryFn<typeof Text> = Template.bind({});
+SizeXL.args = {
+  children: 'Text with Size S',
+  $size: 'm'
+};
 
 export default meta;

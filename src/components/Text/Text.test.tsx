@@ -5,9 +5,9 @@ import * as Stories from './Text.stories';
 const { SizeM } = composeStories(Stories);
 
 describe('<Text />', () => {
-  test('should renders the component', () => {
+  test('should render the component', () => {
     render(<SizeM />);
-    const children = screen.getByText('This is a sample text from storybook');
+    const children = screen.getByTestId('text-component');
 
     expect(children).toBeInTheDocument();
   });

@@ -17,11 +17,11 @@ export const sizes = {
 };
 
 export const weights = {
-  bold: '900',
-  semiBold: '700',
-  medium: '600',
+  bold: '700',
+  semiBold: '600',
+  medium: '500',
   regular: '400',
-  light: '200'
+  light: '300'
 };
 
 export const appTheme: DefaultTheme = {
