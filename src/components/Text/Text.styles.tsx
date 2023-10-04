@@ -6,4 +6,5 @@ export const Text = styled.p<TextProps>`
   font-size: ${({ theme: { sizes }, $size }) => sizes[$size!] || sizes.m}px;
   margin: 0px;
   padding: 0px;
+  font-weight: ${({ theme: { weights }, $weight }) => weights[$weight!] || weights.regular};
 `;
