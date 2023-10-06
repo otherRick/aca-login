@@ -8,7 +8,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   decorators: [ThemeDecorator, BackgroundLayout],
   argTypes: {
-    onPress: { table: { disable: true } }
+    onClick: { table: { disable: true } }
   }
 };
 
