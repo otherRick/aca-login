@@ -20,5 +20,4 @@ export interface ButtonProps
   > {
   children?: ReactNode;
   $variant?: ButtonVariantType;
-  onPress?(): void;
 }
