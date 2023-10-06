@@ -7,4 +7,5 @@ export const Text = styled.p<TextProps>`
   margin: 0px;
   padding: 0px;
   font-weight: ${({ theme: { weights }, $weight }) => weights[$weight!] || weights.regular};
+  letter-spacing: ${({ $letterSpacingEnabled }) => ($letterSpacingEnabled ? '12px' : undefined)};
 `;

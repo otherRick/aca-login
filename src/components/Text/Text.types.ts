@@ -9,5 +9,6 @@ export interface TextProps {
   $size?: TextSizeType;
   $color?: TextColorType;
   $weight?: TextWeightType;
+  $letterSpacingEnabled?: boolean;
   children?: ReactNode;
 }
