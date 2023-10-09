@@ -13,3 +13,15 @@ export const FormSection = styled.section`
   gap: 20px;
   margin-top: 30px;
 `;
+
+export const InputsContainer = styled.div`
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+`;
+
+export const WebNameFieldsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;

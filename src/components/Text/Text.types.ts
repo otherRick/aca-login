@@ -10,5 +10,6 @@ export interface TextProps {
   $color?: TextColorType;
   $weight?: TextWeightType;
   $letterSpacingEnabled?: boolean;
+  $capitalized?: boolean;
   children?: ReactNode;
 }

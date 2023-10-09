@@ -1,3 +1,10 @@
+export enum REGISTER_FORM_SCHEMA_ENUM {
+  FIRST_NAME,
+  LAST_NAME,
+  EMAIL,
+  PASSWORD
+}
+
 export interface RegisterFormSchemaType {
   name: string;
   placeholder: string;
