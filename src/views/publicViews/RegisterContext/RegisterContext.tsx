@@ -1,25 +1,56 @@
 import { createContext, useCallback, useMemo, useState } from 'react';
 import {
   RegisterFormData,
-  RegisterViewContextData,
-  RegisterViewContextProps,
-  ValidationErrorList
+  RegisterContextData,
+  RegisterContextProps
 } from './RegisterContext.types';
 import { signUpAPI } from '../services/signUp.api';
 import { AxiosError } from 'axios';
-import { registerFormSchema } from '../helpers/registerFormSchema';
-import { transformHyphenToCapital } from '../helpers/transformHyphenToCapital';
+import {
+  REGISTER_FORM_SCHEMA_ENUM,
+  registerFormSchema
+} from '../RegisterView/helpers/registerFormSchema';
+import { transformHyphenToCapital } from '../RegisterView/helpers/transformHyphenToCapital';
+import { emailConfirmationAPI } from '../services/emailConfirmation.api';
+import { APIResponseError } from '../../../services/services.types';
 
-const registerViewInitialState: RegisterViewContextData = {
+const registerContextInitialState: RegisterContextData = {
   async submitRegisterForm() {},
+  async sendConfirmationCode() {},
   formSchema: registerFormSchema,
-  isRegisterFormValid: false
+  isRegisterFormValid: false,
+  confirmationResponseError: undefined,
+  isEmailConfirmationValid: false
 };
 
-export const RegisterViewContext = createContext(registerViewInitialState);
+export const RegisterContext = createContext(registerContextInitialState);
 
-export const RegisterViewContextProvider = ({ children }: RegisterViewContextProps) => {
+export const RegisterContextProvider = ({ children }: RegisterContextProps) => {
   const [formSchema, setFormSchema] = useState(registerFormSchema);
+  const [confirmationResponseError, setconfirmationResponseError] = useState<string | undefined>(
+    undefined
+  );
+
+  const sendConfirmationCode = useCallback(
+    async (confirmationCode: string) => {
+      try {
+        const { value: email } = formSchema[REGISTER_FORM_SCHEMA_ENUM.EMAIL];
+
+        await emailConfirmationAPI({ confirmationCode, email });
+      } catch (error) {
+        // const { response } = error as AxiosError<APIResponseError>;
+
+        // !DEBT: threat errors with a error factory to show on the UI.
+        setconfirmationResponseError('Algo deu errado. Tente novamente.');
+      }
+    },
+    [formSchema]
+  );
+
+  const isEmailConfirmationValid = useMemo(
+    () => confirmationResponseError === '',
+    [confirmationResponseError]
+  );
 
   /**
    * Submit a registration form asynchronously.
@@ -51,7 +82,7 @@ export const RegisterViewContextProvider = ({ children }: RegisterViewContextPro
           email: formData.email
         });
       } catch (error) {
-        const axiosError = error as AxiosError<ValidationErrorList>;
+        const axiosError = error as AxiosError<APIResponseError>;
         const errorData = axiosError?.response?.data;
         const formSchemaUpdate = [...formSchema];
 
@@ -81,18 +112,26 @@ export const RegisterViewContextProvider = ({ children }: RegisterViewContextPro
     [formSchema]
   );
 
-  const registerViewContextValue: RegisterViewContextData = useMemo(
+  const RegisterContextValue: RegisterContextData = useMemo(
     () => ({
       submitRegisterForm,
       formSchema,
-      isRegisterFormValid
+      isRegisterFormValid,
+      sendConfirmationCode,
+      confirmationResponseError,
+      isEmailConfirmationValid
     }),
-    [submitRegisterForm, formSchema, isRegisterFormValid]
+    [
+      submitRegisterForm,
+      formSchema,
+      isRegisterFormValid,
+      sendConfirmationCode,
+      confirmationResponseError,
+      isEmailConfirmationValid
+    ]
   );
 
   return (
-    <RegisterViewContext.Provider value={registerViewContextValue}>
-      {children}
-    </RegisterViewContext.Provider>
+    <RegisterContext.Provider value={RegisterContextValue}>{children}</RegisterContext.Provider>
   );
 };

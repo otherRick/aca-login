@@ -11,5 +11,6 @@ export interface TextProps {
   $weight?: TextWeightType;
   $letterSpacingEnabled?: boolean;
   $capitalized?: boolean;
+  $centerText?: boolean;
   children?: ReactNode;
 }

@@ -1,19 +1,19 @@
 import { FormEvent } from 'react';
-import { Button } from '../../../components/Button/Button';
-import { Text } from '../../../components/Text/Text';
-import { useRegisterFormContext } from '../RegisterViewContext/useRegisterFormContext';
+import { Button } from '../../../../components/Button/Button';
+import { Text } from '../../../../components/Text/Text';
+import { useRegisterContext } from '../../RegisterContext/useRegisterContext';
 import * as S from './RegisterForm.styles';
-import { Input } from '../../../components/Input/Input';
+import { Input } from '../../../../components/Input/Input';
 
 import { useNavigate } from 'react-router-dom';
 import { serializeFormInputElements } from '../helpers/serializeFormInputElements';
-import { useIsWeb } from '../../../hooks/useIsWeb';
+import { useIsWeb } from '../../../../hooks/useIsWeb';
 
 export const RegisterForm = () => {
   const navigate = useNavigate();
   const isWeb = useIsWeb();
 
-  const { submitRegisterForm, formSchema, isRegisterFormValid } = useRegisterFormContext();
+  const { submitRegisterForm, formSchema, isRegisterFormValid } = useRegisterContext();
   const formSchemaNameFields = formSchema.slice(0, 2);
   const formSchemaRemainingFields = formSchema.slice(2);
 

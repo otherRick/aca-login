@@ -1,9 +1,9 @@
 import { Meta } from '@storybook/react';
-import { ThemeDecorator } from '../../storybook/decorators/ThemeDecorator';
+import { ThemeDecorator } from '../../../storybook/decorators/ThemeDecorator';
 import { RegisterView } from './RegisterView';
 import { RegisterViewProps } from './RegisterView.types';
-import { RouterDecorator } from '../../storybook/decorators/RouterDecorator';
-import { RegisterViewContextProvider } from './RegisterViewContext/RegisterViewContext';
+import { RouterDecorator } from '../../../storybook/decorators/RouterDecorator';
+import { RegisterViewContextProvider } from '../RegisterContext/RegisterContext';
 
 const meta: Meta<typeof RegisterView> = {
   component: RegisterView,

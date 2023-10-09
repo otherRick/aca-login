@@ -9,4 +9,6 @@ export const Text = styled.p<TextProps>`
   padding: 0px;
   font-weight: ${({ theme: { weights }, $weight }) => weights[$weight!] || weights.regular};
   letter-spacing: ${({ $letterSpacingEnabled }) => ($letterSpacingEnabled ? '12px' : undefined)};
+  text-align: ${({ $centerText }) => ($centerText ? 'center' : undefined)};
+  line-height: 40px;
 `;

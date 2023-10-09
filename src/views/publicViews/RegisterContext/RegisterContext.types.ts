@@ -1,14 +1,5 @@
 import { ReactNode } from 'react';
-import { RegisterFormSchemaType } from '../helpers/registerFormSchema';
-
-type ValidationError = {
-  loc: string[];
-  msg: string;
-};
-
-export type ValidationErrorList = {
-  detail: ValidationError[];
-};
+import { RegisterFormSchemaType } from '../RegisterView/helpers/registerFormSchema';
 
 export interface RegisterFormData {
   firstName: string;
@@ -18,12 +9,15 @@ export interface RegisterFormData {
   confirmPassword?: string;
 }
 
-export interface RegisterViewContextProps {
+export interface RegisterContextProps {
   children: ReactNode;
 }
 
-export interface RegisterViewContextData {
+export interface RegisterContextData {
   submitRegisterForm(formData: RegisterFormData): Promise<void>;
   formSchema: RegisterFormSchemaType[];
   isRegisterFormValid: boolean;
+  sendConfirmationCode(confirmationCode: string): Promise<void>;
+  confirmationResponseError?: string;
+  isEmailConfirmationValid?: boolean;
 }

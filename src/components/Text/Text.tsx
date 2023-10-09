@@ -8,12 +8,13 @@ export const Text = ({
   $color = 'navy900',
   $letterSpacingEnabled = false,
   $capitalized = false,
+  $centerText,
   children
 }: TextProps) => (
   <S.Text
     data-testid='text-component'
     as={getElementBySize($size)}
-    {...{ $color, $size, $weight, $letterSpacingEnabled, $capitalized }}
+    {...{ $centerText, $color, $size, $weight, $letterSpacingEnabled, $capitalized }}
   >
     {children}
   </S.Text>
