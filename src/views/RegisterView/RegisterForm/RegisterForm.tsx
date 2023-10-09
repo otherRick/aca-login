@@ -1,20 +1,35 @@
+import { FormEvent } from 'react';
 import { Button } from '../../../components/Button/Button';
-import { Input } from '../../../components/Input/Input';
 import { Text } from '../../../components/Text/Text';
+import { useRegisterFormContext } from '../RegisterViewContext/useRegisterFormContext';
 import * as S from './RegisterForm.styles';
+import { Input } from '../../../components/Input/Input';
+import { serializeFormInputElements } from '../helpers/serializeFormInputElements';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisterForm = () => {
+  const navigate = useNavigate();
+
+  const { submitRegisterForm, formSchema, isRegisterFormValid } = useRegisterFormContext();
+
+  const onRegisterFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    await submitRegisterForm(serializeFormInputElements(event.currentTarget.elements));
+
+    // !DEBT: check if formSchema doesn't contain any errors
+    if (isRegisterFormValid) navigate('/confirm-email');
+  };
+
   return (
     <S.FormSection>
-      <S.Form>
+      <S.Form onSubmit={onRegisterFormSubmit}>
         <Text $weight='bold' $size='l'>
           Cadastro
         </Text>
-        <Input placeholder='Primeiro nome' label='Primeiro nome' />
-        <Input placeholder='Último nome' label='Último nome' />
-        <Input placeholder='seu@email.com' label='E-mail*' />
-        <Input placeholder='******' label='Senha*' passwordMode />
-        <Input placeholder='******' label='Confirme a senha*' passwordMode />
+        {formSchema.map((props) => (
+          <Input key={props.name} {...props} value={undefined} />
+        ))}
         <Text>Não possui uma conta?</Text>
         <Button type='submit'>Criar minha conta aca.so</Button>
       </S.Form>

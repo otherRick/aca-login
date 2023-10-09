@@ -18,6 +18,7 @@ export const Container = styled.div<InputContainerProps>`
 
 export const InfoTextWrapper = styled.div`
   margin-left: 20px;
+  max-width: 300px;
 `;
 
 export const SvgWrapper = styled.div`
