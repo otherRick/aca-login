@@ -62,6 +62,7 @@
 export const Aca = () => {
   return (
     <svg
+      data-testid='aca-logo-icon'
       width='128'
       height='30'
       viewBox='0 0 128 30'

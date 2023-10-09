@@ -2,12 +2,12 @@ import { Meta } from '@storybook/react';
 
 import { ThemeDecorator } from '../../storybook/decorators/ThemeDecorator';
 import { Input } from './Input';
-import { BackgroundLayout } from '../../storybook/decorators/BackgroundLayout';
+import { BackgroundLayoutDecorator } from '../../storybook/decorators/BackgroundLayoutDecorator';
 import { InputProps } from './Input.types';
 
 const meta: Meta<typeof Input> = {
   component: Input,
-  decorators: [ThemeDecorator, BackgroundLayout],
+  decorators: [ThemeDecorator, BackgroundLayoutDecorator],
   argTypes: {
     label: { control: 'text' },
     passwordMode: { control: 'boolean' },

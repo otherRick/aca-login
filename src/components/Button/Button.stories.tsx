@@ -2,11 +2,11 @@ import { Meta, StoryFn } from '@storybook/react';
 import { ThemeDecorator } from '../../storybook/decorators/ThemeDecorator';
 import { Button } from './Button';
 import { ButtonProps } from './Button.types';
-import { BackgroundLayout } from '../../storybook/decorators/BackgroundLayout';
+import { BackgroundLayoutDecorator } from '../../storybook/decorators/BackgroundLayoutDecorator';
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  decorators: [ThemeDecorator, BackgroundLayout],
+  decorators: [ThemeDecorator, BackgroundLayoutDecorator],
   argTypes: {
     onClick: { table: { disable: true } }
   }

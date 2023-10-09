@@ -4,8 +4,9 @@ import { Text } from '../../../components/Text/Text';
 import { useRegisterFormContext } from '../RegisterViewContext/useRegisterFormContext';
 import * as S from './RegisterForm.styles';
 import { Input } from '../../../components/Input/Input';
-import { serializeFormInputElements } from '../helpers/serializeFormInputElements';
+
 import { useNavigate } from 'react-router-dom';
+import { serializeFormInputElements } from '../helpers/serializeFormInputElements';
 
 export const RegisterForm = () => {
   const navigate = useNavigate();
@@ -17,13 +18,12 @@ export const RegisterForm = () => {
 
     await submitRegisterForm(serializeFormInputElements(event.currentTarget.elements));
 
-    // !DEBT: check if formSchema doesn't contain any errors
     if (isRegisterFormValid) navigate('/confirm-email');
   };
 
   return (
     <S.FormSection>
-      <S.Form onSubmit={onRegisterFormSubmit}>
+      <S.Form data-testid='register-form-component' onSubmit={onRegisterFormSubmit}>
         <Text $weight='bold' $size='l'>
           Cadastro
         </Text>

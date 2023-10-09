@@ -5,7 +5,7 @@ const config: Config = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['./src/setupTests.ts'],
   collectCoverage: true,
-  coveragePathIgnorePatterns: ['\\.styles\\.tsx$', '\\.stories\\.tsx$']
+  coveragePathIgnorePatterns: ['\\.styles\\.tsx$', '\\.stories\\.tsx$', '\\.api\\.ts$']
 };
 
 export default config;

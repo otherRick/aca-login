@@ -1,4 +1,3 @@
-import { ConfirmEmailView } from '../../views/ConfirmEmailView/ConfirmEmailView';
 import { RegisterView } from '../../views/RegisterView/RegisterView';
 
 export const publicRouter = [
@@ -7,7 +6,7 @@ export const publicRouter = [
     element: <RegisterView />
   },
   {
-    path: '/confirm-email',
-    element: <ConfirmEmailView />
+    path: '/confirm-email'
+    // element: <ConfirmEmailView />
   }
 ];
