@@ -6,6 +6,10 @@ export interface InputProps
   label?: string;
   passwordMode?: boolean;
   errorMessage?: string;
+  $fullWidth?: boolean;
 }
 
-export type InputContainerProps = Omit<InputProps, 'errorMessage'> & { $errorMessage?: string };
+export type InputContainerProps = Omit<InputProps, 'errorMessage'> & {
+  $errorMessage?: string;
+  $isWeb?: boolean;
+};

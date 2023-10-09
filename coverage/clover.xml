@@ -1,93 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1696620964593" clover="3.2.0">
-  <project timestamp="1696620964593" name="All files">
-    <metrics statements="37" coveredstatements="37" conditionals="13" coveredconditionals="12" methods="10" coveredmethods="9" elements="60" coveredelements="58" complexity="0" loc="37" ncloc="37" packages="8" files="9" classes="9"/>
+<coverage generated="1696866594607" clover="3.2.0">
+  <project timestamp="1696866594607" name="All files">
+    <metrics statements="149" coveredstatements="141" conditionals="36" coveredconditionals="30" methods="41" coveredmethods="34" elements="226" coveredelements="205" complexity="0" loc="149" ncloc="149" packages="16" files="22" classes="22"/>
     <package name="components.Button">
-      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="Button.tsx" path="/Users/derick/code/aca-login/src/components/Button/Button.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="7" count="1" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="6" type="stmt"/>
       </file>
     </package>
     <package name="components.Button.helpers">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getColorByVariant.ts" path="/Users/derick/code/aca-login/src/components/Button/helpers/getColorByVariant.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
       </file>
     </package>
     <package name="components.Icons">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Aca.tsx" path="/Users/derick/code/aca-login/src/components/Icons/Aca.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+      </file>
       <file name="Eye.tsx" path="/Users/derick/code/aca-login/src/components/Icons/Eye.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
       </file>
     </package>
     <package name="components.Input">
-      <metrics statements="10" coveredstatements="10" conditionals="9" coveredconditionals="9" methods="3" coveredmethods="2"/>
+      <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="2"/>
       <file name="Input.tsx" path="/Users/derick/code/aca-login/src/components/Input/Input.tsx">
-        <metrics statements="10" coveredstatements="10" conditionals="9" coveredconditionals="9" methods="3" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
+        <metrics statements="12" coveredstatements="12" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="2"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="15" count="26" type="stmt"/>
+        <line num="16" count="26" type="stmt"/>
+        <line num="18" count="26" type="stmt"/>
+        <line num="20" count="26" type="stmt"/>
+        <line num="21" count="15" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
       </file>
     </package>
     <package name="components.Text">
-      <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="Text.tsx" path="/Users/derick/code/aca-login/src/components/Text/Text.tsx">
-        <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="11" count="5" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="13" count="28" type="stmt"/>
       </file>
     </package>
     <package name="components.Text.helpers">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="getElementBySize.ts" path="/Users/derick/code/aca-login/src/components/Text/helpers/getElementBySize.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="10" count="28" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <file name="useIsWeb.tsx" path="/Users/derick/code/aca-login/src/hooks/useIsWeb.tsx">
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="31" type="stmt"/>
+        <line num="6" count="31" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="13" count="18" type="stmt"/>
+        <line num="14" count="18" type="stmt"/>
+        <line num="18" count="31" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/derick/code/aca-login/src/services/index.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
     </package>
     <package name="storybook.decorators">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="BackgroundLayout.tsx" path="/Users/derick/code/aca-login/src/storybook/decorators/BackgroundLayout.tsx">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="BackgroundLayoutDecorator.tsx" path="/Users/derick/code/aca-login/src/storybook/decorators/BackgroundLayoutDecorator.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="3" type="stmt"/>
         <line num="4" count="3" type="stmt"/>
         <line num="5" count="8" type="stmt"/>
       </file>
+      <file name="RouterDecorator.tsx" path="/Users/derick/code/aca-login/src/storybook/decorators/RouterDecorator.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+      </file>
       <file name="ThemeDecorator.tsx" path="/Users/derick/code/aca-login/src/storybook/decorators/ThemeDecorator.tsx">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="8" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
       </file>
     </package>
     <package name="themes">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="appTheme.ts" path="/Users/derick/code/aca-login/src/themes/appTheme.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.ConfirmEmail">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ConfirmEmail.tsx" path="/Users/derick/code/aca-login/src/views/ConfirmEmail/ConfirmEmail.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.RegisterView">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="RegisterView.tsx" path="/Users/derick/code/aca-login/src/views/RegisterView/RegisterView.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.RegisterView.Header">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Header.tsx" path="/Users/derick/code/aca-login/src/views/RegisterView/Header/Header.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.RegisterView.RegisterForm">
+      <metrics statements="21" coveredstatements="20" conditionals="11" coveredconditionals="6" methods="4" coveredmethods="3"/>
+      <file name="RegisterForm.tsx" path="/Users/derick/code/aca-login/src/views/RegisterView/RegisterForm/RegisterForm.tsx">
+        <metrics statements="21" coveredstatements="20" conditionals="11" coveredconditionals="6" methods="4" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="49" count="15" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.RegisterView.RegisterViewContext">
+      <metrics statements="33" coveredstatements="33" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="9"/>
+      <file name="RegisterViewContext.tsx" path="/Users/derick/code/aca-login/src/views/RegisterView/RegisterViewContext/RegisterViewContext.tsx">
+        <metrics statements="30" coveredstatements="30" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="8"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="31" count="5" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="5" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="62" count="4" type="stmt"/>
+        <line num="63" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="65" count="4" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="79" count="5" type="stmt"/>
+        <line num="80" count="25" type="stmt"/>
+        <line num="84" count="5" type="stmt"/>
+        <line num="85" count="5" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+      </file>
+      <file name="useRegisterFormContext.ts" path="/Users/derick/code/aca-login/src/views/RegisterView/RegisterViewContext/useRegisterFormContext.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.RegisterView.helpers">
+      <metrics statements="23" coveredstatements="17" conditionals="5" coveredconditionals="5" methods="8" coveredmethods="5"/>
+      <file name="registerFormSchema.ts" path="/Users/derick/code/aca-login/src/views/RegisterView/helpers/registerFormSchema.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+      <file name="serializeFormInputElements.ts" path="/Users/derick/code/aca-login/src/views/RegisterView/helpers/serializeFormInputElements.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+      <file name="transformHyphenToCapital.ts" path="/Users/derick/code/aca-login/src/views/RegisterView/helpers/transformHyphenToCapital.ts">
+        <metrics statements="10" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="20" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
       </file>
     </package>
   </project>

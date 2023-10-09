@@ -1,7 +1,7 @@
 import { StoryFn } from '@storybook/react';
 import { colors } from '../../themes/appTheme';
 
-export const BackgroundLayout = (Story: StoryFn) => {
+export const BackgroundLayoutDecorator = (Story: StoryFn) => {
   return (
     <div
       style={{

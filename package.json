@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "start:fresh": "rm -rf node_modules yarn.lock && yarn",
+    "start:fresh": "rm -rf node_modules yarn.lock && yarn && yarn start",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -18,8 +18,10 @@
     "styled-components": "^5"
   },
   "dependencies": {
+    "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0",
     "styled-components": "^6.0.8"
   },
   "devDependencies": {

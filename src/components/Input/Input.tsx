@@ -3,9 +3,17 @@ import { Eye } from '../Icons/Eye';
 import { Text } from '../Text/Text';
 import * as S from './Input.styles';
 import { InputProps } from './Input.types';
+import { useIsWeb } from '../../hooks/useIsWeb';
 
-export const Input = ({ errorMessage, label, passwordMode = false }: InputProps) => {
+export const Input = ({
+  $fullWidth = true,
+  errorMessage,
+  label,
+  passwordMode = false,
+  ...rest
+}: InputProps) => {
   const [togglePasswordMode, setTogglePasswordMode] = useState(passwordMode);
+  const isWeb = useIsWeb();
 
   const handleTogglePassword = () => setTogglePasswordMode(!togglePasswordMode);
 
@@ -20,8 +28,17 @@ export const Input = ({ errorMessage, label, passwordMode = false }: InputProps)
           <Text $weight='medium'>{label}</Text>
         </S.InfoTextWrapper>
       ) : null}
-      <S.Container data-testid='input-component-container' $errorMessage={errorMessage}>
-        <S.Input data-testid='input-component' type={togglePasswordMode ? 'password' : 'text'} />
+      <S.Container
+        data-testid='input-component-container'
+        $fullWidth={$fullWidth}
+        $errorMessage={errorMessage}
+        $isWeb={isWeb}
+      >
+        <S.Input
+          data-testid='input-component'
+          type={togglePasswordMode ? 'password' : 'text'}
+          {...rest}
+        />
         {passwordMode && (
           <S.SvgWrapper>
             <Eye onClick={handleTogglePassword} />

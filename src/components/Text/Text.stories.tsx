@@ -2,11 +2,11 @@ import { Meta, StoryFn } from '@storybook/react';
 import { Text } from './Text';
 import { TextProps } from './Text.types';
 import { ThemeDecorator } from '../../storybook/decorators/ThemeDecorator';
-import { BackgroundLayout } from '../../storybook/decorators/BackgroundLayout';
+import { BackgroundLayoutDecorator } from '../../storybook/decorators/BackgroundLayoutDecorator';
 
 const meta: Meta<typeof Text> = {
   component: Text,
-  decorators: [ThemeDecorator, BackgroundLayout],
+  decorators: [ThemeDecorator, BackgroundLayoutDecorator],
   args: {
     children: 'This is a sample text from storybook'
   }
