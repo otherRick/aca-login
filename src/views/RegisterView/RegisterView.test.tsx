@@ -6,6 +6,10 @@ const { View } = composeStories(Stories);
 
 describe('<RegisterView />', () => {
   test('should render component with all children', () => {
+    // set screen for mobile size
+    const mobileScreenSize = 414;
+    window.innerWidth = mobileScreenSize;
+
     render(<View />);
 
     const acaLogo = screen.getByTestId('aca-logo-icon');
