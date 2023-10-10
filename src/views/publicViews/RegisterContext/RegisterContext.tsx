@@ -41,7 +41,7 @@ export const RegisterContextProvider = ({ children }: RegisterContextProps) => {
         // const { response } = error as AxiosError<APIResponseError>;
 
         // !DEBT: threat errors with a error factory to show on the UI.
-        setconfirmationResponseError('Algo deu errado. Tente novamente.');
+        setconfirmationResponseError('Ops! Tente novamente.');
       }
     },
     [formSchema]

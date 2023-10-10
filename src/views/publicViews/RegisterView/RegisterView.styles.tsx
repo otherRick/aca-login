@@ -6,8 +6,9 @@ export const Container = styled.main`
   align-items: center;
   background-color: ${({ theme: { colors } }) => colors.navy400};
   flex-direction: column;
+  width: 100%;
 `;
 
 export const ButtonWrapper = styled.div`
-  margin-bottom: 30px;
+  margin: 30px 0;
 `;

@@ -3,10 +3,10 @@ import { Aca } from '../../../components/Icons/Aca';
 import * as S from './HeaderLayout.styles';
 
 export const HeaderLayout = ({ children }: { children: ReactNode }) => (
-  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 60 }}>
-    <S.Container>
+  <S.Wrapper>
+    <S.Header>
       <Aca />
-    </S.Container>
+    </S.Header>
     {children}
-  </div>
+  </S.Wrapper>
 );
